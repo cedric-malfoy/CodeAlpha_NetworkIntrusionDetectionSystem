@@ -51,6 +51,8 @@ docker compose down
 
 The Docker build mounts a CA bundle as a BuildKit secret. On a managed cloud workspace with a read-only Docker cache, use `BUILDX_CONFIG=/tmp/codealpha-ids-buildx docker compose build target`. The default CA source is `/etc/ssl/certs/ca-certificates.crt`; `CODEX_PROXY_CERT` can select the configured proxy CA. Proxy settings and TLS verification remain enabled.
 
+Newer Bake builders may request an explicit read entitlement for that public CA file. With the default CA path, use `docker buildx bake --file compose.yaml --allow=fs.read=/etc/ssl/certs/ca-certificates.crt --load target`. This grants access only to that file; the CA remains a secret mount outside image layers.
+
 ## Run offline with Python
 
 Use Python 3.12. Install the pinned review tools, including test and PDF dependencies:

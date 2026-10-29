@@ -24,7 +24,8 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
       - run: .venv/bin/python -m pip_audit -r requirements-dev.txt --no-deps --disable-pip --strict --progress-spinner off
-      - run: docker compose build target
+      - name: Build lab image with explicit public CA read permission
+        run: docker buildx bake --file compose.yaml --allow=fs.read=/etc/ssl/certs/ca-certificates.crt --load target
       - run: python tools/verify_live.py
       - name: Stop owned lab
         if: always()
