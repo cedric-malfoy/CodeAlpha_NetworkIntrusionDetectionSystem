@@ -38,4 +38,4 @@ tests/test_store_web.py::test_api_filters_limits_and_readonly_contract PASSED [ 
 tests/test_store_web.py::test_stale_live_capture_is_distinguishable_from_no_alerts PASSED [ 96%]
 tests/test_store_web.py::test_security_headers_and_source_values_are_data PASSED [100%]
 
-============================= 30 passed in 15.44s ==============================
+============================= 30 passed in 14.05s ==============================
