@@ -14,6 +14,8 @@ A **CodeAlpha Cyber Security Task 4** project with our own packet-to-incident de
 
 This is a local research/training system. The selected public benchmark has a **15.4% false-positive rate** at the frozen threshold. See the model card before interpreting a score as evidence of an attack.
 
+![Live Docker dashboard](reports/figures/dashboard-desktop.png)
+
 ## Start the Docker lab
 
 Use Linux (or WSL) with Docker Engine and Docker Compose v2. The image contains the pinned Python dependencies and trained model; Node.js is only needed for browser tests.
@@ -97,6 +99,8 @@ The selected public captures and labels total approximately 100 MB. The fetcher 
 
 The source manifest freezes entire captures into train/validation/test groups. Lab sessions use independent seeds and stay within one partition. Official labels are matched by bidirectional endpoints, protocol, and timestamps. Unmatched/ambiguous windows are excluded and counted in [data_quality.json](reports/data_quality.json); an infected capture is not labeled malicious wholesale.
 
+The preparation tool reuses ignored per-capture feature caches. Remove `data/processed/` before changing decoder, feature, or label-join code, then retrain and evaluate the new version. A fresh clone has no processed caches.
+
 Inputs are statistical features only: counts, network-layer byte lengths, timing, TCP flags, protocol indicators, and per-source connection/port diversity. Raw addresses, raw ports, absolute timestamps, dataset IDs, labels, and rule outputs are excluded from learned inputs. Metadata carries the schema, exact feature order, threshold, package versions, dataset hash, and artifact hash.
 
 `joblib` is pickle-based: load only trusted project-generated artifacts and metadata. The hash checks integrity, not safety of arbitrary user-supplied models. There is no model-upload endpoint. A missing or incompatible model produces a visible degraded state while rules continue.
@@ -114,6 +118,8 @@ python tools/verify_live.py
 Browser tests use `/usr/bin/chromium` when present; otherwise Playwright's Chromium. Set `CHROMIUM_PATH` or `PYTHON` when needed. On Linux, `npx playwright install --with-deps chromium` installs browser system dependencies. Tests own and stop their temporary web server. The live verifier requires the built Docker image and leaves the lab running for inspection.
 
 GitHub Actions checks feature/rule/storage/API tests, real offline integration, trusted model inference, browser behavior, and dependency advisories. Full public-data training is a separate reproducible command and does not run on every push.
+
+Run `python tools/run_checks.py` to capture the Python/browser/dependency transcripts, versions, source commit, and file fingerprints under `reports/evidence/`. The final local suite contains **30 Python tests and five browser checks**. Live evidence is recorded separately by `tools/verify_live.py`.
 
 ## Native Linux capture
 

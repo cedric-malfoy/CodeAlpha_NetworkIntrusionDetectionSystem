@@ -67,6 +67,8 @@ Official labels are joined using bidirectional endpoints, protocol, and time. A 
 
 The source/lock manifests record URLs, partitions, sizes, and SHA-256 values. Data-quality evidence records matched classes, excluded windows, unsupported packets, late packets, and capacity drops by capture. One source capture contains a truncated record; unsupported/malformed cases remain part of the recorded quality accounting.
 
+The selected downloads total 100,847,227 bytes. They contain 675,440 packets; 38,926 packets are unsupported/malformed under this decoder. Public extraction yields 243,827 matched labeled windows and excludes 14,823 unmatched windows across all partitions. No late-packet or flow-capacity drops were recorded during this extraction.
+
 ### Shared feature and training contract
 
 Schema flow5-v1 has 22 features: duration, directional packet counts and IP-layer bytes, packet-length moments/range, inter-arrival moments, packet/byte rates, SYN/RST/ACK/FIN fractions, protocol indicators, and per-source connection/destination-port diversity.
@@ -104,6 +106,8 @@ The Python suite covers known feature values, offline/stream equivalence, fixed-
 The browser suite checks displayed incident data, literal rendering of adversarial source strings, filters, detector details, model-card disclosure, incident navigation, new alerts appearing through polling, keyboard access, and layouts at 320, 390, 768, and 1440 pixels. Temporary browser servers and databases are owned and removed by the tests.
 
 Test transcripts, dependency-audit JSON, live evidence, code fingerprints, and final results are saved under reports/evidence. Passing tests establish the documented cases, not exhaustive detection coverage. GitHub Actions checks the packaged model and offline/browser behavior; public-data training remains a separately reproducible operation.
+
+The final local suite has **30 Python tests and five browser checks**. The recorded dependency audit covers all 48 pinned runtime/development packages and reports no known advisories at scan time. The final verification manifest identifies the exact checked source commit and file hashes.
 
 ### Continuous live verification
 
