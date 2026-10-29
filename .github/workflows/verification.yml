@@ -20,6 +20,7 @@ jobs:
       - run: .venv/bin/python -m pip install --upgrade pip
       - run: .venv/bin/python -m pip install -r requirements-dev.txt
       - run: .venv/bin/python -m pytest -q
+      - run: python tools/validate_notebook.py --executed
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser

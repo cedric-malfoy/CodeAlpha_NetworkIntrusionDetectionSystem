@@ -1,0 +1,40 @@
+{
+  "completed_at": "2026-10-29T11:38:24.979003+00:00",
+  "python": "3.12.14",
+  "sklearn": "1.9.1",
+  "schema": "flow5-v1",
+  "threshold": 0.95,
+  "training_groups": 14,
+  "validation_groups": 7,
+  "test_groups": 9,
+  "experimental_artifact_loader": "ready",
+  "offline_rules_verified": [
+    "CUSTOM-001",
+    "CUSTOM-002",
+    "CUSTOM-003",
+    "CUSTOM-004",
+    "CUSTOM-005"
+  ],
+  "software_tests": {
+    "executed": true,
+    "exit_code": 0
+  },
+  "published_files_unchanged": true,
+  "protected_sha256": {
+    "models/detector.joblib": "c35e3a6e938578e086c438854de5d80db752013f884589f3211b55833abef64a",
+    "models/metadata.json": "aac18f5a5c0ea972a279f28220437231cdda9ff4457227cdc9dae951388ca240",
+    "reports/model_metrics.json": "45426f2c8d2e714fe9384ce90ec6da742c903beb41d57c633327af37a80853c7",
+    "reports/data_quality.json": "b00258729a08a17b28ea4559a6a838e5fa623c4df7f80489fc261439bd2054df",
+    "data/sources.lock.json": "10c503b3019a3360028c35bfa451e86f0eae518f891a9a27a44863abc2e85046"
+  },
+  "notebook": "01_training_evaluation.ipynb",
+  "notebook_sha256": "0f9b19efc4e99a0394f5dbd3d930d03cc603dcd86a803594e0ee332992a4ecbb",
+  "cells": 28,
+  "successful_code_cells": 13,
+  "preparation_smoke": {
+    "public_capture": "malware-8",
+    "lab_session": "lab-100",
+    "fresh_arrays_match_checked_cache": true
+  },
+  "published_held_out_metrics_reproduced": true
+}

@@ -89,6 +89,18 @@ The public partition is 93.6% suspicious windows. An always-suspicious majority 
 
 Model scores are uncalibrated classifier outputs. They are not probabilities that an intrusion occurred. Public capture windows are correlated, and IoT traffic from 2018–2019 is not representative of every current network.
 
+## Training and evaluation notebook
+
+Open [notebooks/01_training_evaluation.ipynb](notebooks/01_training_evaluation.ipynb) for a cell-by-cell reproduction using the shared feature/label pipeline, a fresh Random Forest, validation-only threshold selection, separate public/lab evaluation, plots, artifact export, and software tests. The original published model was produced by scripts; the notebook provides an interactive workflow without overwriting that model or its published reports.
+
+```bash
+source .venv/bin/activate
+python -m pip install -r requirements-notebook.txt
+python -m jupyterlab
+```
+
+Choose the `.venv` Python kernel, then **Restart Kernel and Run All Cells**. First-time preparation downloads approximately 100 MB; compatible data can be reused afterwards. Experimental outputs are kept under ignored `artifacts/notebook-runs/reproduction-v1/`. Read [notebooks/README.md](notebooks/README.md) for kernel registration, cache handling, and interpretation. Reproducing an already published test set is not a new blind evaluation.
+
 ## Reproduce the training
 
 ```bash

@@ -8,3 +8,5 @@ runtime
 __pycache__
 .pytest_cache
 reports/*.pdf
+notebooks
+requirements-notebook.txt
