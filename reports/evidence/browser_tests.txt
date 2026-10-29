@@ -2,11 +2,11 @@
 > codealpha-custom-ml-ids@1.0.0 test:browser
 > node --test tests/browser.test.cjs
 
-✔ overview renders real alerts and escaped source data without script errors (4876.770461ms)
-✔ severity, source, signature, and detector filters work and can be cleared (4131.558357ms)
-✔ incident and model routes expose evidence, including public false positives (931.988204ms)
-✔ new incidents appear through two-second refresh without a page reload (1325.125046ms)
-✔ keyboard access and all dashboard views fit 320, 390, 768, and 1440 pixels (2608.532904ms)
+✔ overview renders real alerts and escaped source data without script errors (4560.26092ms)
+✔ severity, source, signature, and detector filters work and can be cleared (3748.127037ms)
+✔ incident and model routes expose evidence, including public false positives (976.210714ms)
+✔ new incidents appear through two-second refresh without a page reload (960.287053ms)
+✔ keyboard access and all dashboard views fit 320, 390, 768, and 1440 pixels (2591.955366ms)
 ℹ tests 5
 ℹ suites 0
 ℹ pass 5
@@ -14,7 +14,7 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 15330.519361
+ℹ duration_ms 13872.955422
 
 npm notice
 npm notice New major version of npm available! 11.9.0 -> 12.2.1

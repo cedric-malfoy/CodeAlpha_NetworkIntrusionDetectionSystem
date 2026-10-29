@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-29T10:03:40.380559+00:00",
-  "source_commit": "4bfc9329143e200d239d1e2740779044e40b8feb",
+  "generated_at_utc": "2026-10-29T10:09:16.664864+00:00",
+  "source_commit": "ca6f5e4f12f5eb6c6d96e65748682bd2bfc53a40",
   "python": "3.12.14",
   "versions": {
     "scapy": "2.8.0",
@@ -14,7 +14,7 @@
   },
   "source_sha256": {
     ".dockerignore": "927356bfc416e8573919c602ffc85da2c8921b4626b49f0bde570a52b5d66fbc",
-    ".github/workflows/verification.yml": "7e21ab36cff193fffcede001241dd2a02e61e04a3a24f698b3609cbf758db5b1",
+    ".github/workflows/verification.yml": "61d900b11d69a38ee9c0ab090893e3765eb80aa6a9ddffb4d71c6f14e4bd887c",
     ".gitignore": "f17d2df8220b40e453e7ee3961467079dbb385c28ac6b61b44c3c1e92e4676ce",
     "DEMO_AND_SUBMISSION.md": "5b692cc0cf5f082c69a6d4eb2e274afbf5c9d15b1e5e610b59ae5a91b1d695fa",
     "Dockerfile": "a255aed37bbcfb92b015ade455921eafbdcbcb397739674eae715c076d8fac7a",
@@ -39,6 +39,8 @@
     "ids_lab/store.py": "98520383096bb51ea8a980a11eaf6ef479188cc1b64883958f615a5e79b9209e",
     "ids_lab/synthetic.py": "3d0a0d1c60d2f51f6126330f6e632d2de3a8f4bd6c7cf0ecafb0accce9b4c50d",
     "ids_lab/web.py": "2bb6fe7bb88ce968fa083ebd79fca82d295880f494eca4b421f396796b57b3d7",
+    "lab/target.py": "15164422b7e7bff4b8d1b6b42d39f72c76c07fcd82f411e5518e620cfb54ee82",
+    "lab/traffic.py": "10a1b69217363a359506a7309badb7d11b0de5317717c0c252b134223e098ff7",
     "models/detector.joblib": "c35e3a6e938578e086c438854de5d80db752013f884589f3211b55833abef64a",
     "models/metadata.json": "aac18f5a5c0ea972a279f28220437231cdda9ff4457227cdc9dae951388ca240",
     "package-lock.json": "1ed720936c3ab6a109d064e46949c216d85c2052a85fc600a6ad0f169b96d005",
