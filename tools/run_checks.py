@@ -30,7 +30,7 @@ def main():
             transcript=result.stdout+'\n'+result.stderr
         except subprocess.TimeoutExpired:
             exit_code=124;transcript='Check timed out; not a passing result.'
-        (output/(name+'.txt')).write_text(transcript.replace(str(ROOT),'<project>'))
+        (output/(name+'.txt')).write_text(transcript.replace(str(ROOT),'<project>').rstrip()+'\n')
         results.append({'name':name,'command':['python' if part==sys.executable else part.replace(str(ROOT),'<project>') for part in command],'exit_code':exit_code,'passed':exit_code==0})
         print(f'{name}: exit {exit_code}',flush=True)
     verification={'generated_at_utc':datetime.now(timezone.utc).isoformat(),'source_commit':commit,
