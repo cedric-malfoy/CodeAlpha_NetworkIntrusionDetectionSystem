@@ -24,3 +24,8 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
       - run: .venv/bin/python -m pip_audit -r requirements-dev.txt --no-deps --disable-pip --strict --progress-spinner off
+      - run: docker compose build target
+      - run: python tools/verify_live.py
+      - name: Stop owned lab
+        if: always()
+        run: docker compose down --volumes
