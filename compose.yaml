@@ -1,0 +1,61 @@
+name: codealpha-custom-ids
+x-app: &app
+  image: codealpha-custom-ids:local
+  build:
+    context: .
+    secrets: [proxy_ca]
+  init: true
+  read_only: true
+  tmpfs: [/tmp]
+  security_opt: [no-new-privileges:true]
+services:
+  target:
+    <<: *app
+    command: [python, lab/target.py]
+    cap_drop: [ALL]
+    cap_add: [NET_BIND_SERVICE]
+    networks: [lab]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/',timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+  sensor:
+    <<: *app
+    command: [python, -m, ids_lab, --database, /data/ids.sqlite3, live, --interface, eth0]
+    network_mode: service:target
+    cap_drop: [ALL]
+    cap_add: [NET_RAW]
+    volumes: [state:/data]
+    depends_on:
+      target: {condition: service_healthy}
+  dashboard:
+    <<: *app
+    command: [python, -m, ids_lab, --database, /data/ids.sqlite3, dashboard, --host, 0.0.0.0, --port, '8088']
+    cap_drop: [ALL]
+    ports: ['127.0.0.1:8088:8088']
+    volumes: [state:/data:ro]
+    depends_on: [sensor]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8088/api/status',timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+  traffic:
+    <<: *app
+    entrypoint: [python, lab/traffic.py]
+    command: [all]
+    profiles: [tools]
+    cap_drop: [ALL]
+    cap_add: [NET_RAW]
+    networks: [lab]
+    depends_on:
+      target: {condition: service_healthy}
+networks:
+  lab:
+    internal: true
+volumes:
+  state:
+secrets:
+  proxy_ca:
+    file: ${CODEX_PROXY_CERT:-/etc/ssl/certs/ca-certificates.crt}

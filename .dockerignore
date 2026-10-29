@@ -1,0 +1,10 @@
+.git
+.venv
+node_modules
+data/raw
+data/processed
+artifacts
+runtime
+__pycache__
+.pytest_cache
+reports/*.pdf

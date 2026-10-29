@@ -1,0 +1,97 @@
+{
+  "generated_at_utc": "2026-10-29T09:50:17.664992+00:00",
+  "continuous_same_run_verified": true,
+  "duration_seconds": 112.32111597061157,
+  "image_id": "sha256:050f94821208ca35222d4a48a6148614023649f251a84197a8086e2f84f21988",
+  "cases": [
+    {
+      "scenario": "benign",
+      "generator_output": "{\"scenario\": \"benign\", \"http_requests\": 3, \"dns_queries\": 3}",
+      "events": 0,
+      "rules": [],
+      "ml_flags": 0,
+      "scores": []
+    },
+    {
+      "scenario": "suspicious",
+      "generator_output": "{\"scenario\": \"suspicious\", \"connectivity_checks\": 1, \"http_checks\": 2, \"dns_indicators\": 1, \"tcp_attempts\": 25, \"udp_packets\": 40}",
+      "events": 21,
+      "rules": [
+        "CUSTOM-001",
+        "CUSTOM-002",
+        "CUSTOM-003",
+        "CUSTOM-004",
+        "CUSTOM-005"
+      ],
+      "ml_flags": 0,
+      "scores": []
+    },
+    {
+      "scenario": "burst",
+      "generator_output": "{\"scenario\": \"burst\", \"udp_packets\": 45, \"payload_bytes\": \"40\\u2013272 variable\"}",
+      "events": 1,
+      "rules": [],
+      "ml_flags": 1,
+      "scores": [
+        0.965
+      ]
+    }
+  ],
+  "final_status": {
+    "capture_active": true,
+    "events": 44,
+    "incidents": 4,
+    "sensor_stale": false,
+    "severities": {
+      "1": 2,
+      "2": 40,
+      "4": 2
+    },
+    "sources": [
+      {
+        "count": 44,
+        "src": "172.19.0.3"
+      }
+    ],
+    "state": {
+      "sensor": {
+        "flow_dropped": 0,
+        "heartbeat": 1793267417.4714777,
+        "late_packets": 0,
+        "ml_suspicious": 2,
+        "mode": "live",
+        "model_error": "",
+        "model_status": "ready",
+        "model_version": "custom-rf-v1",
+        "packets": 304,
+        "queue_dropped": 0,
+        "run_id": "f1d0f74af94049c8bad0641be98a6908",
+        "started": 1793267116.6816177,
+        "status": "active",
+        "stream_dropped": 0,
+        "threshold": 0.95,
+        "unsupported": 34,
+        "windows": 40
+      }
+    },
+    "timeline": [
+      {
+        "count": 21,
+        "time": 1793266910
+      },
+      {
+        "count": 1,
+        "time": 1793267115
+      },
+      {
+        "count": 21,
+        "time": 1793267380
+      },
+      {
+        "count": 1,
+        "time": 1793267410
+      }
+    ]
+  },
+  "note": "Demonstration outcomes are not held-out benchmark metrics. Live fixed-size traffic may not be flagged by ML. Variable-size burst is a separate documented supported demonstration."
+}

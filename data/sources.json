@@ -1,0 +1,16 @@
+{
+  "dataset": "IoT-23, version 1.0.0 (selected captures)",
+  "citation": "Garcia, Sebastian; Parmisano, Agustin; Erquiaga, Maria Jose (2020). IoT-23: A labeled dataset with malicious and benign IoT network traffic. https://doi.org/10.5281/zenodo.4743746",
+  "license_record": "https://zenodo.org/records/4743746",
+  "license": "CC-BY-4.0 (published Zenodo dataset record)",
+  "base_url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/",
+  "captures": [
+    {"id":"malware-8","split":"train","directory":"CTU-IoT-Malware-Capture-8-1/","pcap":"2018-07-31-15-15-09-192.168.100.113.pcap"},
+    {"id":"malware-20","split":"train","directory":"CTU-IoT-Malware-Capture-20-1/","pcap":"2018-10-02-13-12-30-192.168.100.103.pcap"},
+    {"id":"malware-21","split":"validation","directory":"CTU-IoT-Malware-Capture-21-1/","pcap":"2018-10-03-15-22-32-192.168.100.113.pcap"},
+    {"id":"honeypot-4","split":"validation","directory":"CTU-Honeypot-Capture-4-1/","pcap":"2018-10-25-14-06-32-192.168.1.132.pcap.xz"},
+    {"id":"malware-3","split":"test","directory":"CTU-IoT-Malware-Capture-3-1/","pcap":"2018-05-21_capture.pcap"},
+    {"id":"malware-42","split":"test","directory":"CTU-IoT-Malware-Capture-42-1/","pcap":"2019-01-10-14-34-38-192.168.1.197.pcap"},
+    {"id":"somfy-01","split":"test","directory":"CTU-Honeypot-Capture-7-1/Somfy-01/","pcap":"2019-07-03-15-15-47-first_start_somfy_gateway.pcap"}
+  ]
+}

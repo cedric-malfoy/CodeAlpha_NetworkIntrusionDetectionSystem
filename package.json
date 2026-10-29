@@ -1,0 +1,9 @@
+{
+  "name":"codealpha-custom-ml-ids",
+  "version":"1.0.0",
+  "private":true,
+  "description":"Browser verification for the local custom ML IDS dashboard",
+  "scripts":{"test:browser":"node --test tests/browser.test.cjs"},
+  "devDependencies":{"playwright":"1.62.1"},
+  "engines":{"node":">=22"}
+}

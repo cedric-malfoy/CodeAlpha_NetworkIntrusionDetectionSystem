@@ -1,0 +1,14 @@
+{
+  "syn_count": 10,
+  "syn_seconds": 5,
+  "http_ports": [80, 8080],
+  "dns_indicator": "blocked.lab.example",
+  "rules": {
+    "CUSTOM-001": {"name":"ICMP connectivity test","severity":4,"response":"Verify the source and intended connectivity check. This informational rule is not evidence of an attack."},
+    "CUSTOM-002": {"name":"TCP SYN burst","severity":2,"response":"Inspect destination-port diversity and failed connections. Confirm whether an approved scanner or retrying client caused the burst before containment."},
+    "CUSTOM-003": {"name":"Cleartext credential field","severity":2,"response":"Identify the HTTP service, stop using real credentials over cleartext, and require HTTPS. Rotate any real credential that may have been exposed."},
+    "CUSTOM-004": {"name":"HTTP traversal pattern","severity":1,"response":"Review the requested route and server logs, verify path normalization and access controls, and investigate repeated requests from the source."},
+    "CUSTOM-005": {"name":"Training DNS indicator","severity":2,"response":"Verify the query and its originating process. This reserved domain is a training indicator, not a claim of real threat intelligence."},
+    "ML": {"name":"Suspicious traffic pattern","severity":2,"response":"Inspect the feature values and surrounding activity. Confirm the event using host/network evidence before taking containment action; model scores are not proof of compromise."}
+  }
+}
