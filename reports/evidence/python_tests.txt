@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0 -- <project>/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: <project>
+configfile: pytest.ini
+testpaths: tests
+plugins: platformdirs-4.14.0
+collecting ... collected 30 items
+
+tests/test_features.py::test_known_bidirectional_counts_flags_and_ip_bytes PASSED [  3%]
+tests/test_features.py::test_streamed_and_offline_feature_values_are_equal PASSED [  6%]
+tests/test_features.py::test_windows_close_at_event_time_and_idle_flush PASSED [ 10%]
+tests/test_features.py::test_flow_capacity_is_bounded PASSED             [ 13%]
+tests/test_features.py::test_payload_identity_does_not_enter_model_features PASSED [ 16%]
+tests/test_features.py::test_ipv6_and_icmp_supported[raw0] PASSED        [ 20%]
+tests/test_features.py::test_ipv6_and_icmp_supported[raw1] PASSED        [ 23%]
+tests/test_features.py::test_non_ip_and_fragmented_packets_are_explicitly_unsupported PASSED [ 26%]
+tests/test_integration.py::test_real_pipeline_finds_five_signatures_and_replay_is_idempotent PASSED [ 30%]
+tests/test_integration.py::test_benign_fixture_has_no_custom_intrusion_rule_hits PASSED [ 33%]
+tests/test_integration.py::test_rules_continue_operating_when_model_is_missing PASSED [ 36%]
+tests/test_integration.py::test_synthetic_capture_writing_never_resolves_network_addresses PASSED [ 40%]
+tests/test_labels_model.py::test_label_join_rejects_unknown_and_ambiguous_connections PASSED [ 43%]
+tests/test_labels_model.py::test_frozen_capture_and_session_partitions_are_disjoint PASSED [ 46%]
+tests/test_labels_model.py::test_shipped_model_is_compatible_and_inference_is_deterministic PASSED [ 50%]
+tests/test_labels_model.py::test_missing_and_incompatible_models_are_explicitly_unavailable PASSED [ 53%]
+tests/test_labels_model.py::test_altered_model_hash_is_rejected_before_loading PASSED [ 56%]
+tests/test_labels_model.py::test_nonfinite_feature_vector_is_rejected PASSED [ 60%]
+tests/test_rules.py::test_syn_threshold_positive_negative_and_expiry PASSED [ 63%]
+tests/test_rules.py::test_dns_indicator_exact_match_and_echo_is_informational PASSED [ 66%]
+tests/test_rules.py::test_traversal_reassembly_out_of_order_and_retransmission PASSED [ 70%]
+tests/test_rules.py::test_credential_field_requires_http_post_and_complete_body PASSED [ 73%]
+tests/test_rules.py::test_normal_http_and_tls_bytes_do_not_match_http_rules PASSED [ 76%]
+tests/test_rules.py::test_tcp_stream_memory_and_count_are_bounded PASSED [ 80%]
+tests/test_store_web.py::test_rule_and_ml_merge_idempotently_and_survive_restart PASSED [ 83%]
+tests/test_store_web.py::test_incidents_aggregate_source_destination_in_60_second_buckets PASSED [ 86%]
+tests/test_store_web.py::test_cold_dashboard_and_empty_database_are_usable PASSED [ 90%]
+tests/test_store_web.py::test_api_filters_limits_and_readonly_contract PASSED [ 93%]
+tests/test_store_web.py::test_stale_live_capture_is_distinguishable_from_no_alerts PASSED [ 96%]
+tests/test_store_web.py::test_security_headers_and_source_values_are_data PASSED [100%]
+
+============================= 30 passed in 19.91s ==============================
