@@ -46,3 +46,15 @@ tomli_w==1.2.0
 typing_extensions==4.16.0
 urllib3==2.8.0
 Werkzeug==3.1.9
+attrs==26.1.0
+fastjsonschema==2.22.2
+jsonschema-specifications==2025.9.1
+jsonschema==4.26.0
+jupyter-core==5.9.1
+nbformat==5.11.1
+pandas==3.1.0
+python-dateutil==4.0.0
+referencing==0.37.0
+rpds-py==2026.9.1
+traitlets==5.16.1
+tzdata==2026.6

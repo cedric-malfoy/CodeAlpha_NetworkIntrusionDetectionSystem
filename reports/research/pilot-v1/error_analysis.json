@@ -1,0 +1,38 @@
+{
+  "scope": "Exploratory published-test error audit; no fresh-data labels or scores used to select a policy.",
+  "diagnostic_script_sha256": "c74763d07e055ef3c15500d8765a137f04cfa2962e2a23a42e9660ad9f826131",
+  "total_false_positives": 1843,
+  "exact_training_positive_feature_matches": 796,
+  "exact_match_fraction": 0.4319045035268584,
+  "captures": [
+    {
+      "capture": "malware-3",
+      "false_positives": 616,
+      "exact_malicious_training_feature_matches": 162,
+      "false_positives_by_protocol": {
+        "icmp": 0,
+        "tcp": 616,
+        "udp": 0
+      }
+    },
+    {
+      "capture": "malware-42",
+      "false_positives": 1226,
+      "exact_malicious_training_feature_matches": 634,
+      "false_positives_by_protocol": {
+        "tcp": 1226,
+        "udp": 0
+      }
+    },
+    {
+      "capture": "somfy-01",
+      "false_positives": 1,
+      "exact_malicious_training_feature_matches": 0,
+      "false_positives_by_protocol": {
+        "icmp": 0,
+        "tcp": 1,
+        "udp": 0
+      }
+    }
+  ]
+}

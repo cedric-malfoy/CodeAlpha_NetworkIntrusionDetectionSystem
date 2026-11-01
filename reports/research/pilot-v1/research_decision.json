@@ -1,0 +1,7 @@
+{
+  "paper_ready": false,
+  "reason": "Fresh evidence and a differentiated contribution are required.",
+  "false_positive_reduction": 0.31202333369342117,
+  "recall_loss": 0.29563678870592014,
+  "pilot_target_met": false
+}

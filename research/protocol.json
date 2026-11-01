@@ -1,0 +1,16 @@
+{
+  "version": "false-alarms-v1",
+  "seeds": [42, 43, 44, 45, 46],
+  "false_positive_budgets": [0.001, 0.005, 0.01],
+  "primary_rules": ["CUSTOM-002", "CUSTOM-004"],
+  "informational_rules": ["CUSTOM-001", "CUSTOM-003", "CUSTOM-005"],
+  "max_download_bytes": 1073741824,
+  "max_file_bytes": 268435456,
+  "minimum_fresh_label_coverage": 0.9,
+  "fresh_captures": [
+    {"id": "fresh-1", "directory": "CTU-IoT-Malware-Capture-1-1/", "pcap": "2018-05-09-192.168.100.103.pcap", "split": "fresh", "domain": "public"},
+    {"id": "fresh-34", "directory": "CTU-IoT-Malware-Capture-34-1/", "pcap": "2018-12-21-15-50-14-192.168.1.195.pcap", "split": "fresh", "domain": "public"}
+  ],
+  "interpretation": "Published tests are exploratory after diagnosis. Fresh captures are opened only after freezing policies. Window counts are not independent replications."
+}
+

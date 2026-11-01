@@ -1,0 +1,19 @@
+{
+  "fingerprint": "9921e9e3e020b480f226a0de5f0366834de9bb4e3aa3876fe75dc39ae72f4002",
+  "candidate_model": "random_forest-42.joblib",
+  "candidate_sha256": "c35e3a6e938578e086c438854de5d80db752013f884589f3211b55833abef64a",
+  "candidate_policy": "fpr_0.001",
+  "candidate_threshold": 0.97,
+  "reference_model": "random_forest-42-baseline.joblib",
+  "reference_sha256": "c35e3a6e938578e086c438854de5d80db752013f884589f3211b55833abef64a",
+  "reference_threshold": 0.95,
+  "selection": "RF seed 42 at 0.1% validation FPR budget was specified before fresh evaluation; not selected by published-test results.",
+  "protocol_sha256": "6d730f17a32030d1df537e4c3c1e03cd81782a95578872c1f823b3b4a38f2259",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}

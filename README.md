@@ -1,5 +1,7 @@
 # Signalwatch: Custom Network IDS + Machine Learning
 
+The separate [false-alarm research pilot](research/README.md) provides auditable detector comparisons, private Kaggle notebook generation, and an [IEEE manuscript scaffold](paper/README.md).
+
 A **CodeAlpha Cyber Security Task 4** project with our own packet-to-incident detection pipeline. Scapy captures/decodes packets; our Python code extracts features and applies rules; scikit-learn provides a trained Random Forest. A local Flask dashboard shows the evidence.
 
 **Read the [system report](reports/SYSTEM_REPORT.md), [PDF report](reports/SYSTEM_REPORT.pdf), and [model card](MODEL_CARD.md).** Source: [CodeAlpha_NetworkIntrusionDetectionSystem](https://github.com/cedric-malfoy/CodeAlpha_NetworkIntrusionDetectionSystem).
