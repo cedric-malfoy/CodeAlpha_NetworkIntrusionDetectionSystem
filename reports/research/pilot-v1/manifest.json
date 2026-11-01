@@ -1,0 +1,100 @@
+{
+  "created_at": "2026-11-01T20:37:00.022613+00:00",
+  "commit": "f36662b489ba135ca5ef150b5fdbc309d1c2096e",
+  "dirty": true,
+  "source_sha256": {
+    "data/sources.json": "df5f0330a346b964f8ca408d1cee2a58658f2cebfd6d3439b08501522b8a7ea6",
+    "data/sources.lock.json": "10c503b3019a3360028c35bfa451e86f0eae518f891a9a27a44863abc2e85046",
+    "ids_lab/__init__.py": "d5540391818876db12e65cfdc7b94fd65052e0e3d5fb0dc0e13fbb0ae2f25f3b",
+    "ids_lab/__main__.py": "166c2c404c2e3afa9a89c66a2765faa129d108cb8ff460ec0492c560d8cfc898",
+    "ids_lab/engine.py": "3dd5d9b85437c72890d77b6f1149847d87220fe9bbf012b27206bcced534f152",
+    "ids_lab/features.py": "0358e006fd64f9ebfa66b7fcd2c54856ea70942687ed54f27ff9f0fcdc6b8ff7",
+    "ids_lab/labels.py": "88564597f9f38f3dbdfe36185bc46310db28d3c11045dbea828bd3dc2b24c605",
+    "ids_lab/model.py": "2c65001d868d1927928d5a79ddd5055026d53284bdc112f44b6b652ecf26afff",
+    "ids_lab/packets.py": "1bb94f0378e6f80d27c68b2eccd498ba9f73917048966ad05dab1e5346a199a4",
+    "ids_lab/rules.py": "739b34e09e9a10e0028bc1633e8818ca788e0df7560c77a313e76f23c03b57e2",
+    "ids_lab/store.py": "98520383096bb51ea8a980a11eaf6ef479188cc1b64883958f615a5e79b9209e",
+    "ids_lab/synthetic.py": "3d0a0d1c60d2f51f6126330f6e632d2de3a8f4bd6c7cf0ecafb0accce9b4c50d",
+    "ids_lab/web.py": "2bb6fe7bb88ce968fa083ebd79fca82d295880f494eca4b421f396796b57b3d7",
+    "requirements-research.txt": "9f91d6522af3203534e8e56002251a0a9920b5febd7d5766e88c3b040ac5ecbb",
+    "research/__init__.py": "abd4857e4dd2c1af2345486a05263a90aa0f29f066f55576393425528d584277",
+    "research/__main__.py": "982976b5921afbc741885fea6bf3377366cd60bec745f35f456b973dc67f08cd",
+    "research/common.py": "83b3ac59b6b84acd8bc20076f0e0a8d08911ac793fcd0f8933a2fcc2600dd139",
+    "research/data.py": "db2b6737d126b61832162d73085f779c5fbf32711f001658fc7d62e1ad91fbc6",
+    "research/evaluation.py": "2d84fc9d0e7740e94c128bcdc3d71fd67e65a546f3c2272b1fda855975fa7fb3",
+    "research/protocol.json": "6d730f17a32030d1df537e4c3c1e03cd81782a95578872c1f823b3b4a38f2259",
+    "research/report.py": "babec5527ad32f172de8d051d83b9022c4a6caa6681479d74ed801c177ec6ba6",
+    "research/runner.py": "a8ec4720f8255e4f15ab025637db848dde4a2ee81c670cce438896f4e7fef24a"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "scapy": "2.8.0",
+    "joblib": "1.6.0",
+    "matplotlib": "3.11.2",
+    "pandas": "3.1.0"
+  },
+  "fingerprint": "9921e9e3e020b480f226a0de5f0366834de9bb4e3aa3876fe75dc39ae72f4002",
+  "smoke": false,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "protocol": {
+    "version": "false-alarms-v1",
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "false_positive_budgets": [
+      0.001,
+      0.005,
+      0.01
+    ],
+    "primary_rules": [
+      "CUSTOM-002",
+      "CUSTOM-004"
+    ],
+    "informational_rules": [
+      "CUSTOM-001",
+      "CUSTOM-003",
+      "CUSTOM-005"
+    ],
+    "max_download_bytes": 1073741824,
+    "max_file_bytes": 268435456,
+    "minimum_fresh_label_coverage": 0.9,
+    "fresh_captures": [
+      {
+        "id": "fresh-1",
+        "directory": "CTU-IoT-Malware-Capture-1-1/",
+        "pcap": "2018-05-09-192.168.100.103.pcap",
+        "split": "fresh",
+        "domain": "public"
+      },
+      {
+        "id": "fresh-34",
+        "directory": "CTU-IoT-Malware-Capture-34-1/",
+        "pcap": "2018-12-21-15-50-14-192.168.1.195.pcap",
+        "split": "fresh",
+        "domain": "public"
+      }
+    ],
+    "interpretation": "Published tests are exploratory after diagnosis. Fresh captures are opened only after freezing policies. Window counts are not independent replications."
+  },
+  "protected_files": {
+    "models/detector.joblib": "c35e3a6e938578e086c438854de5d80db752013f884589f3211b55833abef64a",
+    "models/metadata.json": "aac18f5a5c0ea972a279f28220437231cdda9ff4457227cdc9dae951388ca240",
+    "reports/data_quality.json": "b00258729a08a17b28ea4559a6a838e5fa623c4df7f80489fc261439bd2054df",
+    "reports/model_metrics.json": "45426f2c8d2e714fe9384ce90ec6da742c903beb41d57c633327af37a80853c7",
+    "data/sources.json": "df5f0330a346b964f8ca408d1cee2a58658f2cebfd6d3439b08501522b8a7ea6",
+    "data/sources.lock.json": "10c503b3019a3360028c35bfa451e86f0eae518f891a9a27a44863abc2e85046"
+  },
+  "status": "created"
+}

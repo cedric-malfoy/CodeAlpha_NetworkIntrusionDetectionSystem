@@ -1,0 +1,22 @@
+{
+  "fresh-1/2018-05-09-192.168.100.103.pcap": {
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-1-1/2018-05-09-192.168.100.103.pcap",
+    "sha256": "8ebcd17af4e2d20b1cf7ad564760756f457a80b791a0757a2b1a624b2724969c",
+    "bytes": 145928231
+  },
+  "fresh-1/conn.log.labeled": {
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-1-1/bro/conn.log.labeled",
+    "sha256": "953e8c27a9b2fcfc2776aa136baf9249e6dde4cf752b9192ac7ca0e63b86e232",
+    "bytes": 148305428
+  },
+  "fresh-34/2018-12-21-15-50-14-192.168.1.195.pcap": {
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-34-1/2018-12-21-15-50-14-192.168.1.195.pcap",
+    "sha256": "92ec7e2f6658ee4b007d0b816986c46cc0338bc5e2bec6ceaaca566c695e4699",
+    "bytes": 126317980
+  },
+  "fresh-34/conn.log.labeled": {
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-34-1/bro/conn.log.labeled",
+    "sha256": "d69e49b2aae8c1bd33286936531658202dec47d989f0439bad3f8be180467a6e",
+    "bytes": 2926718
+  }
+}

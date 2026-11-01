@@ -1,0 +1,33 @@
+{
+  "verified_scientific_source_commit": "3d43968",
+  "all_manifest_source_hashes_match": true,
+  "source_hash_checks": {
+    "data/sources.json": true,
+    "data/sources.lock.json": true,
+    "ids_lab/__init__.py": true,
+    "ids_lab/__main__.py": true,
+    "ids_lab/engine.py": true,
+    "ids_lab/features.py": true,
+    "ids_lab/labels.py": true,
+    "ids_lab/model.py": true,
+    "ids_lab/packets.py": true,
+    "ids_lab/rules.py": true,
+    "ids_lab/store.py": true,
+    "ids_lab/synthetic.py": true,
+    "ids_lab/web.py": true,
+    "requirements-research.txt": true,
+    "research/__init__.py": true,
+    "research/__main__.py": true,
+    "research/common.py": true,
+    "research/data.py": true,
+    "research/evaluation.py": true,
+    "research/protocol.json": true,
+    "research/report.py": true,
+    "research/runner.py": true
+  },
+  "scope": "Source content verification against committed scientific code; later notebook-packaging changes do not change the detector experiments.",
+  "software_tests_passed": 42,
+  "baseline_partition_matches": 6,
+  "classifier_seed_comparisons": 20,
+  "remote_status": "Kaggle notebook submission and private settings verified; execution blocked by external DNS and inaccessible private input dataset (API 403). Local and offline portable smoke runs completed."
+}
