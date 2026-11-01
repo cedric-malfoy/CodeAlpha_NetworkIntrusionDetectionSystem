@@ -40,7 +40,7 @@ The reproducible descriptive audit is in [ERROR_ANALYSIS.md](../reports/research
 - [Scientific figures](../reports/research/pilot-v1/figures/)
 - [IEEE manuscript scaffold](../paper/README.md)
 
-The core source hashes for the completed local experiment match commit `96977c4`. The original run manifest also records its earlier checkout commit and dirty working-tree state; source-content verification resolves that provenance without rewriting the original manifest. Later notebook-packaging edits do not change the completed detector experiments.
+The core source hashes for the completed local experiment match commit `3d43968`. The original run manifest also records its earlier checkout commit and dirty working-tree state; source-content verification resolves that provenance without rewriting the original manifest. Later notebook-packaging edits do not change the completed detector experiments.
 
 ## Kaggle status
 
